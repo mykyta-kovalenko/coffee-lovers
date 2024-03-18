@@ -1,0 +1,301 @@
+/* Base styles for body, headings, and paragraphs */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global font styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Font size adjustments for different elements */
+h1 {
+  font-size: 28px;
+}
+
+h2,
+.tablinks {
+  font-size: 24px;
+}
+
+p,
+.coffee-details p,
+.coffee-details .coffee-ingredients li {
+  font-size: 16px;
+}
+
+/* Font size adjustments for 4k screens */
+@media screen and (min-width: 3840px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2,
+  .tablinks {
+    font-size: 32px;
+  }
+
+  p,
+  .coffee-details p,
+  .coffee-details .coffee-ingredients li {
+    font-size: 20px;
+  }
+}
+
+/* Font size adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2,
+  .tablinks {
+    font-size: 20px;
+  }
+
+  p,
+  .coffee-details p,
+  .coffee-details .coffee-ingredients li {
+    font-size: 14px;
+  }
+}
+
+/* Styling for the video background section */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Welcome text styling with fade-in animation */
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1.6s ease-out forwards;
+}
+
+/* Scroll down arrow styling with blinking animation */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  animation: blink-animation 1.6s infinite;
+}
+
+#home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Container for the tab content */
+.tab-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Tab links styling */
+.tab-links {
+  flex-shrink: 0;
+  width: 12%;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.tablinks {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px; /* Adjusted to be divisible by 4 */
+  text-align: left;
+  font-size: 24px; /* Already divisible by 4 */
+  transition: background-color 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #ffe2c4;
+}
+
+.tablinks.active {
+  background-color: #f9be7f;
+}
+
+/* Tab content styling */
+.tabcontent {
+  display: none;
+  flex-grow: 1;
+  padding: 20px; /* Already divisible by 4 */
+  overflow-y: auto;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+/* Responsive design adjustments for mobile */
+@media screen and (max-width: 768px) {
+  /* Stack tabs horizontally on top */
+  .tab-container {
+    flex-direction: column;
+  }
+
+  .tab-links {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .tablinks {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .tabcontent {
+    height: auto;
+    padding: 16px;
+  }
+
+  /* Adjust padding in detail view for mobile */
+  .coffee-details {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* Adjust image width based on padding */
+  .coffee-details img.coffee-image {
+    max-width: calc(100% - 8px);
+    height: auto;
+  }
+}
+
+/* Styling for individual coffee items */
+.coffee {
+  background-color: #ffffff;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover effect for coffee items */
+.coffee:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.coffee::after {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+.tabcontent h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.tabcontent p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.coffee-details h1 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.coffee-details img.coffee-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.coffee-details p {
+  font-size: 16px; /* Already divisible by 4 */
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Already divisible by 4 */
+}
+
+.coffee-details .coffee-ingredients {
+  list-style-type: none;
+  padding: 0;
+}
+
+.coffee-details .coffee-ingredients li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Styling for the back button in detail view */
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.back-button img {
+  width: 24px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.back-button:hover img {
+  transform: scale(1.1);
+}
+
+/* Keyframe animations for fade-in and blinking effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
