@@ -12,6 +12,7 @@ You can view the live version of the website at [https://coffee-lovers-cfd66.web
 - Showcases different types of coffee.
 - Interactive tabs for Hot Coffee and Iced Coffee.
 - Responsive design for desktop and mobile devices.
+- GitHub Actions for CI/CD. Every push to the main branch builds the project and deploys it to Firebase Hosting.
 
 ## Running the Webpage Locally
 
