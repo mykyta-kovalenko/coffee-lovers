@@ -135,6 +135,12 @@ p,
   transition: background-color 0.3s;
 }
 
+.tab-links .tablinks {
+  color: black !important;
+  background-color: transparent;
+  border: none;
+}
+
 .tablinks:hover {
   background-color: #ffe2c4;
   color: black;
@@ -143,6 +149,12 @@ p,
 .tablinks.active {
   background-color: #f9be7f;
   color: black;
+}
+
+.tablinks,
+.tablinks:link,
+.tablinks:visited {
+  color: black !important;
 }
 
 /* Tab content styling */
