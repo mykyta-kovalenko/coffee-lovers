@@ -125,6 +125,7 @@ p,
 
 .tablinks {
   background-color: inherit;
+  color: black;
   border: none;
   outline: none;
   cursor: pointer;
