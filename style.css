@@ -125,29 +125,31 @@ p,
 
 .tablinks {
   background-color: inherit;
-  color: black;
+  color: black !important;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 16px; /* Adjusted to be divisible by 4 */
+  padding: 16px;
   text-align: left;
-  font-size: 24px; /* Already divisible by 4 */
+  font-size: 24px;
   transition: background-color 0.3s;
 }
 
 .tablinks:hover {
   background-color: #ffe2c4;
+  color: black;
 }
 
 .tablinks.active {
   background-color: #f9be7f;
+  color: black;
 }
 
 /* Tab content styling */
 .tabcontent {
   display: none;
   flex-grow: 1;
-  padding: 20px; /* Already divisible by 4 */
+  padding: 20px;
   overflow-y: auto;
 }
 
@@ -246,10 +248,10 @@ p,
 }
 
 .coffee-details p {
-  font-size: 16px; /* Already divisible by 4 */
+  font-size: 16px;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 20px; /* Already divisible by 4 */
+  margin-bottom: 20px;
 }
 
 .coffee-details .coffee-ingredients {
