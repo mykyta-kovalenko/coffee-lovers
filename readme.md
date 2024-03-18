@@ -21,7 +21,7 @@ To run the Coffee Lovers webpage on your local machine, follow these steps:
    git clone https://github.com/mykyta-kovalenko/coffee_lovers
 2. Navigate to the project directory:
    cd coffee-lovers
-3. Open the `index.html` file in your browser "open index.html" or on Windows: start "index.html".
+3. Open the `index.html` file in your browser: "open index.html" or on Windows: start "index.html".
 
 Alternatively, you can use a simple server, for example:
 
